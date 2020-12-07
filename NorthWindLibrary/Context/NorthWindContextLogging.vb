@@ -9,6 +9,7 @@ Namespace Context
     ''' </summary>
     Public Class NorthWindContextLogging
         Inherits DbContext
+        Implements IAsyncDisposable, IDisposable
 
         Public Sub New()
 
@@ -40,10 +41,9 @@ Namespace Context
             MyBase.Dispose()
             _logStream.Dispose()
         End Sub
-
-        Public Overrides Function DisposeAsync() As ValueTask
-            _logStream.DisposeAsync()
-            Return MyBase.DisposeAsync()
+        Protected Overridable Async Function DisposeAsyncCore() As Task(Of ValueTask)
+            Await _logStream.DisposeAsync()
+            Return DisposeAsync()
         End Function
     End Class
 End NameSpace
