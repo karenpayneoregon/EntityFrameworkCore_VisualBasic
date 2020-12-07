@@ -41,6 +41,13 @@ Namespace Context
             MyBase.Dispose()
             _logStream.Dispose()
         End Sub
+        ''' <summary>
+        ''' The public parameter-less DisposeAsync() method is called implicitly in an await using statement,
+        ''' and its purpose is to free unmanaged resources, perform general cleanup, and to indicate that the
+        ''' finalizer, if one is present, need not run. Freeing the memory associated with a managed object is
+        ''' always the domain of the garbage collector.
+        ''' </summary>
+        ''' <returns></returns>
         Protected Overridable Async Function DisposeAsyncCore() As Task(Of ValueTask)
             Await _logStream.DisposeAsync()
             Return DisposeAsync()
