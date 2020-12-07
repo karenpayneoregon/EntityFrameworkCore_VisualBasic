@@ -11,13 +11,26 @@ Public Class Helper
     ''' <returns></returns>
     Public Shared Function ConnectionString() As String
 
-        Dim config = InitConfiguration()
+        InitConfiguration()
         Dim applicationSettings = InitOptions(Of DatabaseSettings)("database")
 
         Return $"Data Source={applicationSettings.DatabaseServer};" &
                 $"Initial Catalog={applicationSettings.Catalog};" &
                 "Integrated Security=True"
     End Function
+    ''' <summary>
+    ''' Example for retrieving settings in another section besides the above for database 
+    ''' </summary>
+    ''' <returns></returns>
+    Public Shared Function Configuration() As ConfigurationGeneral
+
+        InitConfiguration()
+        Dim settings = InitOptions(Of ConfigurationGeneral)("ConfigurationGeneral")
+
+        Return settings
+
+    End Function
+
     ''' <summary>
     ''' Initialize ConfigurationBuilder
     ''' </summary>

@@ -13,11 +13,11 @@ Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "NorthWindLibrary", "NorthWi
 EndProject
 Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "PartsLibrary", "PartsLibrary\PartsLibrary.vbproj", "{6034ACE7-5C6C-4A2E-A806-FEAC1F7DB8EA}"
 EndProject
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ConfigurationHelper", "ConfigurationHelper\ConfigurationHelper.vbproj", "{838BEC77-4901-4490-8659-73ADDED9D410}"
+Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "ConfigurationHelper", "ConfigurationHelper\ConfigurationHelper.vbproj", "{838BEC77-4901-4490-8659-73ADDED9D410}"
 EndProject
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "UtilityLibrary", "UtilityLibrary\UtilityLibrary.vbproj", "{B253FDF1-AB5B-4120-B313-90B50DED923B}"
+Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "UtilityLibrary", "UtilityLibrary\UtilityLibrary.vbproj", "{B253FDF1-AB5B-4120-B313-90B50DED923B}"
 EndProject
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ValidationLibrary", "ValidationLibrary\ValidationLibrary.vbproj", "{B953BAFC-99A0-469F-BDAC-3079FFCFAE18}"
+Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "ValidationLibrary", "ValidationLibrary\ValidationLibrary.vbproj", "{B953BAFC-99A0-469F-BDAC-3079FFCFAE18}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{B41F7FB7-5DE5-46E8-9C53-9F9FD78120E1}"
 	ProjectSection(SolutionItems) = preProject
