@@ -29,6 +29,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		readme.md = readme.md
 	EndProjectSection
 EndProject
+Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "JsonLibrary1", "JsonLibrary1\JsonLibrary1.vbproj", "{4A9A8CFA-4094-4007-9A1A-F6327BEF9530}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -59,6 +61,10 @@ Global
 		{B953BAFC-99A0-469F-BDAC-3079FFCFAE18}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B953BAFC-99A0-469F-BDAC-3079FFCFAE18}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B953BAFC-99A0-469F-BDAC-3079FFCFAE18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A9A8CFA-4094-4007-9A1A-F6327BEF9530}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A9A8CFA-4094-4007-9A1A-F6327BEF9530}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A9A8CFA-4094-4007-9A1A-F6327BEF9530}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A9A8CFA-4094-4007-9A1A-F6327BEF9530}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -70,6 +76,7 @@ Global
 		{838BEC77-4901-4490-8659-73ADDED9D410} = {C9E7D1AC-B9EF-439A-A4D0-2C7C78CE7540}
 		{B253FDF1-AB5B-4120-B313-90B50DED923B} = {C9E7D1AC-B9EF-439A-A4D0-2C7C78CE7540}
 		{B953BAFC-99A0-469F-BDAC-3079FFCFAE18} = {C9E7D1AC-B9EF-439A-A4D0-2C7C78CE7540}
+		{4A9A8CFA-4094-4007-9A1A-F6327BEF9530} = {C9E7D1AC-B9EF-439A-A4D0-2C7C78CE7540}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {311A4509-4018-4C1A-8AC9-74D7F414112A}
