@@ -1,4 +1,6 @@
-﻿Imports Microsoft.EntityFrameworkCore
+﻿Imports ConfigurationHelper
+
+Imports Microsoft.EntityFrameworkCore
 
 Imports Models
 
@@ -17,9 +19,7 @@ Namespace Context
 
 		Protected Overrides Sub OnConfiguring(ByVal optionsBuilder As DbContextOptionsBuilder)
 			If Not optionsBuilder.IsConfigured Then
-				optionsBuilder.UseSqlServer(
-					"Data Source=.\SQLEXPRESS;Initial Catalog=EntityFrameworkCoreSamples;" &
-					"Integrated Security=True")
+				optionsBuilder.UseSqlServer(Helper.ConnectionString())
 			End If
 		End Sub
 

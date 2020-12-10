@@ -17,4 +17,8 @@
     <Folder Include="SQL\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ConfigurationHelper\ConfigurationHelper.vbproj" />
+  </ItemGroup>
+
 </Project>

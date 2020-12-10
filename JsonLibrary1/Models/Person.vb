@@ -19,5 +19,9 @@ Namespace Models
 				Return JsonConvert.SerializeObject(Addresses)
 			End Get
 		End Property
+
+		Public Overrides Function ToString() As String
+			Return $"{FirstName} {LastName}"
+		End Function
 	End Class
 End Namespace
