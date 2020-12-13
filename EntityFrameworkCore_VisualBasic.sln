@@ -35,6 +35,10 @@ Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "WorkingWithJsonConverter", 
 EndProject
 Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "ConnectionStandard", "ConnectionStandard\ConnectionStandard.vbproj", "{7FB2971B-85B9-49FD-8835-A2A6C1EE2140}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configuration examples", "Configuration examples", "{01207C48-9002-4BDE-A47E-397EE40E38FC}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ConfigurationHelperSamples", "ConfigurationHelperSamples\ConfigurationHelperSamples.vbproj", "{307B35C2-EB11-4E70-8106-D77307A5423D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -77,6 +81,10 @@ Global
 		{7FB2971B-85B9-49FD-8835-A2A6C1EE2140}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7FB2971B-85B9-49FD-8835-A2A6C1EE2140}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7FB2971B-85B9-49FD-8835-A2A6C1EE2140}.Release|Any CPU.Build.0 = Release|Any CPU
+		{307B35C2-EB11-4E70-8106-D77307A5423D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{307B35C2-EB11-4E70-8106-D77307A5423D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{307B35C2-EB11-4E70-8106-D77307A5423D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{307B35C2-EB11-4E70-8106-D77307A5423D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -91,6 +99,8 @@ Global
 		{4A9A8CFA-4094-4007-9A1A-F6327BEF9530} = {C9E7D1AC-B9EF-439A-A4D0-2C7C78CE7540}
 		{694DD384-46BF-4578-9F51-3ADE7FFA9E2B} = {4F339AA9-A10E-4A18-A0E5-0D7B1E1F90EE}
 		{7FB2971B-85B9-49FD-8835-A2A6C1EE2140} = {4F339AA9-A10E-4A18-A0E5-0D7B1E1F90EE}
+		{01207C48-9002-4BDE-A47E-397EE40E38FC} = {4F339AA9-A10E-4A18-A0E5-0D7B1E1F90EE}
+		{307B35C2-EB11-4E70-8106-D77307A5423D} = {01207C48-9002-4BDE-A47E-397EE40E38FC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {311A4509-4018-4C1A-8AC9-74D7F414112A}

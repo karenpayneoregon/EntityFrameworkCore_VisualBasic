@@ -1,9 +1,7 @@
-﻿Imports ConfigurationHelper
-
-Imports Microsoft.EntityFrameworkCore
+﻿Imports Microsoft.EntityFrameworkCore
 
 Namespace Context
-    Public Class EmptyContextAppSettings
+    Public Class EmptyContext
         Inherits DbContext
 
         Public Sub New()
@@ -15,7 +13,7 @@ Namespace Context
 
         Protected Overrides Sub OnConfiguring(optionsBuilder As DbContextOptionsBuilder)
             If Not optionsBuilder.IsConfigured Then
-                optionsBuilder.UseSqlServer(Helper.ConnectionString())
+                optionsBuilder.UseSqlServer("Data Source=.\SQLEXPRESS;Initial Catalog=NorthWind2020;Integrated Security=True")
             End If
         End Sub
         Protected Overrides Sub OnModelCreating(ByVal modelBuilder As ModelBuilder)

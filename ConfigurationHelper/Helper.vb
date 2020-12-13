@@ -1,4 +1,5 @@
 ﻿Imports System.IO
+Imports ConfigurationHelper.Classes
 
 Imports Microsoft.Extensions.Configuration
 
@@ -12,25 +13,20 @@ Public Class Helper
     Public Shared Function ConnectionString() As String
 
         InitConfiguration()
+
         Dim applicationSettings = InitOptions(Of DatabaseSettings)("database")
 
         Return $"Data Source={applicationSettings.DatabaseServer};" &
                 $"Initial Catalog={applicationSettings.Catalog};" &
                 "Integrated Security=True"
     End Function
-    ''' <summary>
-    ''' Example for retrieving settings in another section besides the above for database 
-    ''' </summary>
-    ''' <returns></returns>
-    Public Shared Function Configuration() As ConfigurationGeneral
+    Public Shared Function Configuration() As GeneralSettings
 
         InitConfiguration()
-        Dim settings = InitOptions(Of ConfigurationGeneral)("ConfigurationGeneral")
 
-        Return settings
+        Return InitOptions(Of GeneralSettings)("GeneralSettings")
 
     End Function
-
     ''' <summary>
     ''' Initialize ConfigurationBuilder
     ''' </summary>
@@ -48,7 +44,9 @@ Public Class Helper
     ''' <param name="section">Section to read</param>
     ''' <returns>Instance of T</returns>
     Public Shared Function InitOptions(Of T As New)(section As String) As T
+
         Dim config = InitConfiguration()
         Return config.GetSection(section).Get(Of T)()
+
     End Function
 End Class
