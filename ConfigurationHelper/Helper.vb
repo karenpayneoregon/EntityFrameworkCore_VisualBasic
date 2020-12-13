@@ -2,6 +2,7 @@
 Imports ConfigurationHelper.Classes
 
 Imports Microsoft.Extensions.Configuration
+Imports Newtonsoft.Json
 
 Public Class Helper
     Private Shared _fileName As String = "appsettings.json"
@@ -28,12 +29,32 @@ Public Class Helper
 
     End Function
     ''' <summary>
+    ''' Update email settings
+    ''' </summary>
+    ''' <param name="emailSettings">New settings</param>
+    Public Shared Sub UpdateEmail(ByVal emailSettings As EmailSettings)
+        Dim generalSettings = Configuration()
+
+        generalSettings.EmailSettings.Host = emailSettings.Host
+        generalSettings.EmailSettings.Port = emailSettings.Port
+        generalSettings.EmailSettings.DefaultCredentials = emailSettings.DefaultCredentials
+        generalSettings.EmailSettings.EnableSsl = emailSettings.EnableSsl
+        generalSettings.EmailSettings.PickupDirectoryLocation = emailSettings.PickupDirectoryLocation
+
+
+        Dim output As String = JsonConvert.SerializeObject(generalSettings, Formatting.Indented)
+        File.WriteAllText(_fileName, output)
+    End Sub
+
+    ''' <summary>
     ''' Initialize ConfigurationBuilder
     ''' </summary>
     ''' <returns>IConfigurationRoot</returns>
     Private Shared Function InitConfiguration() As IConfigurationRoot
 
-        Dim builder = (New ConfigurationBuilder()).SetBasePath(Directory.GetCurrentDirectory()).AddJsonFile(_fileName)
+        Dim builder = (New ConfigurationBuilder()).
+                SetBasePath(Directory.GetCurrentDirectory()).
+                AddJsonFile(_fileName, [optional] := True, reloadOnChange := True)
         Return builder.Build()
 
     End Function
