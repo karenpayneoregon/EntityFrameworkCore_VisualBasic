@@ -54,7 +54,11 @@ Public Class Helper
 
         Dim builder = (New ConfigurationBuilder()).
                 SetBasePath(Directory.GetCurrentDirectory()).
-                AddJsonFile(_fileName, [optional] := True, reloadOnChange := True)
+                AddJsonFile(
+                    _fileName,
+                    [optional]:=True,
+                    reloadOnChange:=True)
+
         Return builder.Build()
 
     End Function
