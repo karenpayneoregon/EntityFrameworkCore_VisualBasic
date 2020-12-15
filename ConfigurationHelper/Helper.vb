@@ -24,25 +24,19 @@ Public Class Helper
     Public Shared Function Configuration() As GeneralSettings
 
         InitConfiguration()
-
         Return InitOptions(Of GeneralSettings)("GeneralSettings")
 
     End Function
+    Public Shared Function AllSettings() As GeneralSettingsRoot
+        Dim json = File.ReadAllText(_fileName)
+        Return JsonConvert.DeserializeObject(Of GeneralSettingsRoot)(json)
+    End Function
     ''' <summary>
-    ''' Update email settings
+    ''' Update all settings
     ''' </summary>
-    ''' <param name="emailSettings">New settings</param>
-    Public Shared Sub UpdateEmail(ByVal emailSettings As EmailSettings)
-        Dim generalSettings = Configuration()
-
-        generalSettings.EmailSettings.Host = emailSettings.Host
-        generalSettings.EmailSettings.Port = emailSettings.Port
-        generalSettings.EmailSettings.DefaultCredentials = emailSettings.DefaultCredentials
-        generalSettings.EmailSettings.EnableSsl = emailSettings.EnableSsl
-        generalSettings.EmailSettings.PickupDirectoryLocation = emailSettings.PickupDirectoryLocation
-
-
-        Dim output As String = JsonConvert.SerializeObject(generalSettings, Formatting.Indented)
+    ''' <param name="root"></param>
+    Public Shared Sub Update(root As GeneralSettingsRoot)
+        Dim output As String = JsonConvert.SerializeObject(root, Formatting.Indented)
         File.WriteAllText(_fileName, output)
     End Sub
 
