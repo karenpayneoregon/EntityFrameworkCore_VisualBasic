@@ -1,7 +1,11 @@
 ﻿# About
 
-TODO
+Start of a framework to read and write information to and from a json file.
 
-## Project references
+## NuGet references
 
-- JsonLibrary1
+- [Json.net](https://www.nuget.org/packages/Newtonsoft.Json/)
+
+#### Note
+
+This project will be moved out of the solution as this solution is solely for EF Core 5.
