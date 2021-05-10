@@ -3,7 +3,7 @@
         FormOperations.Collect(Me)
     End Sub
 
-    Private Sub GetByFormnName_Click(sender As Object, e As EventArgs) Handles GetByFormNameButton.Click
+    Private Sub GetByFormName_Click(sender As Object, e As EventArgs) Handles GetByFormNameButton.Click
 
         Dim controls = FormOperations.GetByForm(Name)
 
@@ -12,7 +12,6 @@
         Else
             MessageBox.Show("No controls located")
         End If
-
 
     End Sub
     Private Sub SerializeButton_Click(sender As Object, e As EventArgs) Handles SerializeButton.Click

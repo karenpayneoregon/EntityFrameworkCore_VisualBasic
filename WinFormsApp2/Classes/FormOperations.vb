@@ -5,7 +5,7 @@ Public Class FormOperations
     ''' <summary>
     ''' Container for controls taken from executing Collect method
     ''' </summary>
-    public Shared Container As New List(Of ControlContainer)
+    Public Shared Container As New List(Of ControlContainer)
     ''' <summary>
     ''' File name to read and write too
     ''' </summary>
@@ -78,7 +78,7 @@ Public Class FormOperations
                                             .TabIndex = checkBox.TabIndex,
                                             .Name = checkBox.Name,
                                             .Checked = checkBox.Checked,
-                                            .FormName = sender.Name
+                                            .FormName = sender.Name, .Text = checkBox.Text
                             }
                          )
                                     End Sub)

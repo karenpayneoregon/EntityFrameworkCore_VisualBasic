@@ -24,6 +24,9 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Me.AllCustomersButton = New System.Windows.Forms.Button()
         Me.CustomerByIdentifierButton = New System.Windows.Forms.Button()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.CustomerIdTextBox = New System.Windows.Forms.TextBox()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'AllCustomersButton
@@ -44,21 +47,42 @@ Partial Class Form1
         Me.CustomerByIdentifierButton.Text = "Customer by Id"
         Me.CustomerByIdentifierButton.UseVisualStyleBackColor = True
         '
+        'DataGridView1
+        '
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(16, 102)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(772, 200)
+        Me.DataGridView1.TabIndex = 2
+        '
+        'CustomerIdTextBox
+        '
+        Me.CustomerIdTextBox.Location = New System.Drawing.Point(22, 321)
+        Me.CustomerIdTextBox.Name = "CustomerIdTextBox"
+        Me.CustomerIdTextBox.Size = New System.Drawing.Size(100, 23)
+        Me.CustomerIdTextBox.TabIndex = 3
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(186, 107)
+        Me.ClientSize = New System.Drawing.Size(804, 437)
+        Me.Controls.Add(Me.CustomerIdTextBox)
+        Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.CustomerByIdentifierButton)
         Me.Controls.Add(Me.AllCustomersButton)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Name = "Form1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form1"
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents AllCustomersButton As Button
     Friend WithEvents CustomerByIdentifierButton As Button
+    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents CustomerIdTextBox As TextBox
 End Class
